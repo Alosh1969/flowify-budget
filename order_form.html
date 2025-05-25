@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج طلب Flowify Intelligence</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-description {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .radio-group, .checkbox-group {
+            margin-top: 8px;
+        }
+        .radio-option, .checkbox-option {
+            margin-bottom: 10px;
+        }
+        .required:after {
+            content: " *";
+            color: #e53935;
+        }
+        button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto 0;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0d47a1;
+        }
+        .note {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>نموذج طلب Flowify Intelligence</h1>
+        <p class="form-description">يرجى تعبئة النموذج أدناه لطلب منتجات وخدمات Flowify Intelligence المخصصة لاحتياجاتك</p>
+        
+        <form id="orderForm" action="https://alosh1969.github.io/flowify-budget/payment.html" method="get">
+            <div class="form-group">
+                <label for="fullName" class="required">الاسم الكامل</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email" class="required">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">رقم الهاتف (اختياري)</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="country" class="required">الدولة</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>اختر الدولة</option>
+                    <option value="السعودية">السعودية</option>
+                    <option value="الإمارات">الإمارات</option>
+                    <option value="مصر">مصر</option>
+                    <option value="الكويت">الكويت</option>
+                    <option value="قطر">قطر</option>
+                    <option value="البحرين">البحرين</option>
+                    <option value="عمان">عمان</option>
+                    <option value="الأردن">الأردن</option>
+                    <option value="لبنان">لبنان</option>
+                    <option value="العراق">العراق</option>
+                    <option value="المغرب">المغرب</option>
+                    <option value="الجزائر">الجزائر</option>
+                    <option value="تونس">تونس</option>
+                    <option value="ليبيا">ليبيا</option>
+                    <option value="السودان">السودان</option>
+                    <option value="فلسطين">فلسطين</option>
+                    <option value="سوريا">سوريا</option>
+                    <option value="اليمن">اليمن</option>
+                    <option value="أخرى">أخرى</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label class="required">نوع المنتج المطلوب</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="product1" name="productType" value="قالب Excel للميزانية الشخصية" required>
+                        <label for="product1">قالب Excel للميزانية الشخصية</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="product2" name="productType" value="قالب Excel لإدارة المشاريع">
+                        <label for="product2">قالب Excel لإدارة المشاريع</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="product3" name="productType" value="قالب Excel للتحليل المالي للشركات">
+                        <label for="product3">قالب Excel للتحليل المالي للشركات</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="product4" name="productType" value="قالب Excel لإدارة المخزون">
+                        <label for="product4">قالب Excel لإدارة المخزون</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="product5" name="productType" value="قالب Excel لتتبع المبيعات">
+                        <label for="product5">قالب Excel لتتبع المبيعات</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="product6" name="productType" value="قالب Excel مخصص">
+                        <label for="product6">قالب Excel مخصص (يرجى التحديد في قسم الملاحظات)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="required">الغرض من استخدام المنتج</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="purpose1" name="purpose" value="استخدام شخصي" required>
+                        <label for="purpose1">استخدام شخصي</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="purpose2" name="purpose" value="استخدام تجاري لشركة صغيرة">
+                        <label for="purpose2">استخدام تجاري لشركة صغيرة</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="purpose3" name="purpose" value="استخدام تجاري لشركة متوسطة/كبيرة">
+                        <label for="purpose3">استخدام تجاري لشركة متوسطة/كبيرة</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="purpose4" name="purpose" value="استخدام تعليمي">
+                        <label for="purpose4">استخدام تعليمي</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="purpose5" name="purpose" value="استخدام غير ربحي">
+                        <label for="purpose5">استخدام غير ربحي</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="purpose6" name="purpose" value="أخرى">
+                        <label for="purpose6">أخرى (يرجى التحديد في قسم الملاحظات)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="required">مستوى التعقيد المطلوب</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="complexity1" name="complexity" value="أساسي" required>
+                        <label for="complexity1">أساسي (سهل الاستخدام للمبتدئين)</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="complexity2" name="complexity" value="متوسط">
+                        <label for="complexity2">متوسط (يتضمن بعض الميزات المتقدمة)</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="complexity3" name="complexity" value="متقدم">
+                        <label for="complexity3">متقدم (يتضمن صيغ معقدة وتحليلات متقدمة)</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="complexity4" name="complexity" value="احترافي">
+                        <label for="complexity4">احترافي (يتضمن برمجة VBA ولوحات تحكم متكاملة)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>ميزات مطلوبة</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feature1" name="features" value="رسوم بيانية وتحليلات مرئية">
+                        <label for="feature1">رسوم بيانية وتحليلات مرئية</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feature2" name="features" value="لوحة تحكم تفاعلية">
+                        <label for="feature2">لوحة تحكم (Dashboard) تفاعلية</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feature3" name="features" value="تقارير آلية">
+                        <label for="feature3">تقارير آلية</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feature4" name="features" value="توصيات ذكية">
+                        <label for="feature4">توصيات ذكية</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feature5" name="features" value="دعم متعدد اللغات">
+                        <label for="feature5">دعم متعدد اللغات</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feature6" name="features" value="تكامل مع تطبيقات أخرى">
+                        <label for="feature6">تكامل مع تطبيقات أخرى</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feature7" name="features" value="حماية بكلمة مرور">
+                        <label for="feature7">حماية بكلمة مرور</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feature8" name="features" value="قابلية التخصيص">
+                        <label for="feature8">قابلية التخصيص</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="required">الميزانية المتوقعة</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="budget1" name="budget" value="أقل من 5 دولار" required>
+                        <label for="budget1">أقل من 5 دولار</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="budget2" name="budget" value="5-10 دولار">
+                        <label for="budget2">5-10 دولار</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="budget3" name="budget" value="10-20 دولار">
+                        <label for="budget3">10-20 دولار</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="budget4" name="budget" value="20-50 دولار">
+                        <label for="budget4">20-50 دولار</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="budget5" name="budget" value="أكثر من 50 دولار">
+                        <label for="budget5">أكثر من 50 دولار</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="required">المدة المتوقعة للتسليم</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="delivery1" name="deliveryTime" value="فوري" required>
+                        <label for="delivery1">فوري (منتج جاهز)</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="delivery2" name="deliveryTime" value="1-3 أيام">
+                        <label for="delivery2">1-3 أيام</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="delivery3" name="deliveryTime" value="3-7 أيام">
+                        <label for="delivery3">3-7 أيام</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="delivery4" name="deliveryTime" value="7-14 يوم">
+                        <label for="delivery4">7-14 يوم</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="delivery5" name="deliveryTime" value="أكثر من 14 يوم">
+                        <label for="delivery5">أكثر من 14 يوم</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="paymentMethod" class="required">طريقة الدفع المفضلة</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="" disabled selected>اختر طريقة الدفع</option>
+                    <option value="Binance">Binance</option>
+                    <option value="Bitcoin">Bitcoin</option>
+                    <option value="USDT">USDT</option>
+                    <option value="أخرى">أخرى (يرجى التحديد في قسم الملاحظات)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="notes">ملاحظات إضافية ومتطلبات خاصة</label>
+                <textarea id="notes" name="notes" rows="5" placeholder="يرجى تحديد أي متطلبات خاصة أو تفاصيل إضافية عن المنتج المطلوب"></textarea>
+            </div>
+            
+            <button type="submit">إرسال الطلب</button>
+            
+            <p class="note">بعد إرسال الطلب، سيتم توجيهك إلى صفحة الدفع.</p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Store form data in localStorage
+            const formData = new FormData(this);
+            const formDataObj = {};
+            
+            formData.forEach((value, key) => {
+                if (key === 'features') {
+                    if (!formDataObj[key]) {
+                        formDataObj[key] = [];
+                    }
+                    formDataObj[key].push(value);
+                } else {
+                    formDataObj[key] = value;
+                }
+            });
+            
+            localStorage.setItem('flowifyOrderData', JSON.stringify(formDataObj));
+            
+            // Redirect to payment page
+            window.location.href = 'https://alosh1969.github.io/flowify-budget/payment.html';
+        });
+    </script>
+</body>
+</html>
